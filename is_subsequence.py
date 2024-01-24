@@ -27,15 +27,29 @@
 #TODO: Two pointer approach
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        current=0
-        if len(s)==0:
-            return True
-        for i in t:
-            if s[current]==i:
-                current+=1
-                if current==len(s):
+    #     current=0
+    #     if len(s)==0:
+    #         return True
+    #     for i in t:
+    #         if s[current]==i:
+    #             current+=1
+    #             if current==len(s):
+    #                 return True
+    #     return False
+        result_list = []
+        print(len(result_list))
+        current = 0
+        for i in range(len(long_list)):
+            if subsequence[current] == long_list[i]:
+                result_list.append(i)
+                print(result_list)
+                current += 1
+                if current==len(subsequence):
                     return True
-        return False
+        if len(result_list) == len(subsequence):
+            return False
+
+
 
 obj=Solution()
 result=obj.isSubsequence("abc","ahbgdc")
